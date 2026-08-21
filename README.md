@@ -2,19 +2,19 @@
 
 This repository contains the sequence data and analysis outputs generated from a mitochondrial 16S rRNA DNA-barcoding study of Orthopteran samples.
 
-Only the `data/` directory is included in this repository. The dataset contains paired-end sequencing reads, MEGAHIT assemblies, and NCBI BLAST results for nine samples.
+Only the `data/` directory is included in this repository. The dataset contains paired-end sequencing reads, MEGAHIT assemblies (exported from Galaxy), and NCBI BLAST results (as a compiled Word document) for nine samples.
 
 ## Dataset structure
 
 ```text
 data/
 ├── raw_fastq/
-│   ├── *_R1.fastq.gz
-│   └── *_R2.fastq.gz
+│   ├── *_R1.fq.gz
+│   └── *_R2.fq.gz
 ├── assemblies/
-│   └── *_MEGAHIT_min500_contigs.fasta
+│   └── Galaxy<N>-[Assembly with MEGAHIT on dataset <X> and <Y>].fasta
 └── blast_results/
-    └── *_BLASTN_MegaBLAST_core_nt.tsv
+    └── Orthoptera_BLAST_Screenshot_Compilation.docx
 ```
 
 ## Samples
@@ -35,15 +35,12 @@ Full sequencing-provenance names are retained in the filenames.
 
 Example:
 
-- `TSN20260519-0852-00054_B1_20260521-BAN6_B10_B10_i78_R1.fastq.gz`
-- `TSN20260519-0852-00054_B1_20260521-BAN6_B10_B10_i78_R2.fastq.gz`
+- `TSN20260519-0852-00054_B1_20260521-BAN6_B10_B10_i78.R1.fq.gz`
+- `TSN20260519-0852-00054_B1_20260521-BAN6_B10_B10_i78.R2.fq.gz`
 
-The same provenance base is used for the corresponding assembly and BLAST result files.
+Assembly files retain the Galaxy platform export naming (e.g. `Galaxy28-[Assembly with MEGAHIT on dataset 10 and 27].fasta`).
 
-Example:
-
-- `TSN20260519-0852-00054_B1_20260521-BAN6_B10_B10_i78_MEGAHIT_min500_contigs.fasta`
-- `TSN20260519-0852-00054_B1_20260521-BAN6_B10_B10_i78_BLASTN_MegaBLAST_core_nt.tsv`
+BLAST results are provided as a compiled Word document (`Orthoptera_BLAST_Screenshot_Compilation.docx`) containing screenshots of NCBI MegaBLAST output for all nine samples.
 
 ## Experimental background
 
@@ -70,9 +67,9 @@ Assembly settings:
 
 Assembly outputs are stored in `data/assemblies/`.
 
-Files are named using the sequencing provenance followed by:
+Files retain the default export naming from the Galaxy platform:
 
-- `_MEGAHIT_min500_contigs.fasta`
+- `Galaxy<N>-[Assembly with MEGAHIT on dataset <X> and <Y>].fasta`
 
 ## NCBI BLAST analysis
 
@@ -84,9 +81,11 @@ Informative assembled contigs were queried against the NCBI nucleotide database 
 
 BLAST result files are stored in `data/blast_results/`.
 
-Files are named using:
+Results are provided as a single compiled Word document:
 
-- `_BLASTN_MegaBLAST_core_nt.tsv`
+- `Orthoptera_BLAST_Screenshot_Compilation.docx`
+
+This document contains screenshots of NCBI MegaBLAST output for all nine samples.
 
 ## Best BLAST evidence and working molecular interpretations
 
@@ -110,22 +109,22 @@ These are working molecular interpretations based on the retained BLAST results.
 
 Raw reads:
 
-- `<PROVENANCE_BASE>_R1.fastq.gz`
-- `<PROVENANCE_BASE>_R2.fastq.gz`
+- `<PROVENANCE_BASE>.R1.fq.gz`
+- `<PROVENANCE_BASE>.R2.fq.gz`
 
-Assemblies:
+Assemblies (Galaxy export naming):
 
-- `<PROVENANCE_BASE>_MEGAHIT_min500_contigs.fasta`
+- `Galaxy<N>-[Assembly with MEGAHIT on dataset <X> and <Y>].fasta`
 
 BLAST results:
 
-- `<PROVENANCE_BASE>_BLASTN_MegaBLAST_core_nt.tsv`
+- `Orthoptera_BLAST_Screenshot_Compilation.docx`
 
 The original browser/download suffix such as `.fq(2).gz` was not retained because `(2)` represents a local duplicate-download filename and is not biological or sequencing metadata.
 
 ## Data use
 
-Users of this dataset should preserve the provenance-based sample names when linking raw reads, assemblies, and BLAST results.
+Users of this dataset should be aware that raw reads use full sequencing-provenance filenames, while assembly files retain Galaxy platform export names. The BLAST evidence used to compile the summary table above is documented in `data/blast_results/Orthoptera_BLAST_Screenshot_Compilation.docx`.
 
 For reproducibility, it is recommended that checksum values be generated for all FASTQ and FASTA files after final upload.
 
