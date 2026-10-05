@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: >
+  If you use this dataset, please cite the technical report below.
+title: "Orthoptera 16S rRNA Barcoding Dataset"
+type: dataset
+authors:
+  - family-names: "[FAMILY_NAME]"
+    given-names: "[GIVEN_NAME]"
+    orcid: "[AUTHOR_ORCID]"
+repository-code: "[PUBLIC_REPOSITORY_URL]"
+version: "[SOFTWARE_VERSION]"
+preferred-citation:
+  type: report
+  title: "Orthoptera 16S rRNA Barcoding Dataset: A Reproducible Research Data Archive"
+  authors:
+    - family-names: "[FAMILY_NAME]"
+      given-names: "[GIVEN_NAME]"
+      orcid: "[AUTHOR_ORCID]"
+  year: "[YEAR]"
+  doi: "[RESERVED_DOI]"

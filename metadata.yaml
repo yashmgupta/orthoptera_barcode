@@ -1,0 +1,27 @@
+software_name: "Orthoptera 16S rRNA Barcoding Dataset"
+report_title: "Orthoptera 16S rRNA Barcoding Dataset: A Reproducible Research Data Archive"
+authors:
+  - "[AUTHOR_NAME]"
+orcid: "[AUTHOR_ORCID]"
+affiliation: "[AUTHOR_AFFILIATION]"
+software_version: "[SOFTWARE_VERSION]"
+report_version: "1.0"
+publication_date: "[PUBLICATION_DATE]"
+report_id: "[REPORT_ID]"
+repository_url: "[PUBLIC_REPOSITORY_URL]"
+publication_url: "[PUBLICATION_PAGE_URL]"
+pdf_url: "orthoptera-16s-rrna-barcoding-technical-report-v1.0.pdf"
+zenodo_url: "[ZENODO_RECORD_URL]"
+doi: "[RESERVED_DOI]"
+software_doi: "[SOFTWARE_DOI]"
+protocol_doi: "[PROTOCOL_DOI]"
+license: "Not specified in the repository"
+keywords:
+  - Orthoptera
+  - mitochondrial 16S rRNA
+  - DNA barcoding
+  - paired-end sequencing
+  - MEGAHIT
+  - BLASTN
+  - research data archive
+  - reproducibility
